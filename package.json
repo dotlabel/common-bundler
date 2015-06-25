@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint ./src/**/*.js",
     "test": "tape ./spec/*.js",
-    "example": "./lib/cli ./examples/basic/bundles -d -o ./dist -t flowcheck -t babelify"
+    "example": "./lib/cli ./examples/basic/bundles -dv -o ./dist -t flowcheck -t babelify"
   },
   "keywords": [
     "babel",
@@ -22,6 +22,7 @@
   "license": "WTFPL",
   "dependencies": {
     "babel-core": "^5.6.7",
+    "browserify": "^10.2.4",
     "chalk": "^1.0.0",
     "glob": "^5.0.10"
   },
