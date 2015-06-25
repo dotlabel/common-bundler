@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+require('babel-core/register')({
+    optional: [
+        'es7.classProperties'
+    ],
+    loose: [
+        'es6.modules',
+        'es6.classes'
+    ]
+})
+
+var argv = require( 'yargs' )
+
+if ( argv.watch ) {
+    require( './watcher' )( argv )
+    return
+}
+
+require( './bundler' )( argv )
