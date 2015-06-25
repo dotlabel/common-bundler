@@ -1,0 +1,32 @@
+{
+  "name": "browserify-bundler",
+  "version": "0.0.0",
+  "description": "Creates a common package from a collection of scripts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "clean": "rm -rf lib && mkdir lib",
+    "build": "babel src --out-dir lib",
+    "prebuild": "npm run clean",
+    "watch": "babel --watch src --out-dir lib",
+    "lint": "eslint ./src/**/*.js",
+    "test": "tape ./spec/*.js",
+    "pretest": "npm run build"
+  },
+  "keywords": [
+    "babel",
+    "es2015",
+    "browserify",
+    "common",
+    "bundler",
+    "bundle"
+  ],
+  "author": "Matt Styles",
+  "license": "WTFPL",
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.6.7",
+    "babel-eslint": "^3.1.18",
+    "eslint": "^0.23.0",
+    "tape": "^4.0.0"
+  }
+}
