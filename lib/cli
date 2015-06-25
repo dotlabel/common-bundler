@@ -11,7 +11,17 @@ require('babel-core/register')({
 })
 
 var argv = require( 'yargs' )
+    .usage( 'Usage: $0 <bundle_path> [options]' )
+    .demand( 1 )
+    .option( 'o', {
+        alias: 'output',
+        demand: true,
+        describe: 'Output path',
+        type: 'string'
+    })
+    .argv
 
+// @TODO sort this out
 if ( argv.watch ) {
     require( './watcher' )( argv )
     return
