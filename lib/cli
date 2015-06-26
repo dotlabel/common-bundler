@@ -31,6 +31,14 @@ var argv = require( 'yargs' )
         describe: 'Add transforms to the browserify pipeline',
         type: 'string'
     })
+    .option( 'v', {
+        alias: 'verbose',
+        demand: false,
+        describe: 'Adds extra logging, including timings',
+        type: 'boolean'
+    })
+    .help( 'h' )
+    .alias( 'h', 'help' )
     .argv
 
 // @TODO sort this out
