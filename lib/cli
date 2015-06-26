@@ -43,8 +43,10 @@ var argv = require( 'yargs' )
 
 // @TODO sort this out
 if ( argv.watch ) {
-    require( './watcher' )( argv )
-    return
-}
+    var watcher = require( './watcher' )( argv )
+    watcher.watch()
+} else {
+    var bundler = require( './bundler' )( argv )
+    bundler.bundle()
 
-require( './bundler' )( argv )
+}
