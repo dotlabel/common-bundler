@@ -19,11 +19,17 @@ var argv = require( 'yargs' )
         describe: 'Output path',
         type: 'string'
     })
-    .options( 'd', {
+    .option( 'd', {
         alias: 'debug',
         demand: false,
         describe: 'Shortcut to stick browserify into debug mode',
         type: 'boolean'
+    })
+    .option( 't', {
+        alias: 'transform',
+        demand: false,
+        describe: 'Add transforms to the browserify pipeline',
+        type: 'string'
     })
     .argv
 

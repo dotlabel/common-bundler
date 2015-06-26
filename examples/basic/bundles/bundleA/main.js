@@ -1,6 +1,6 @@
 
 import './bundleADep'
-import 'common/menu'
+import '../../common/menu'
 
 console.log( 'bundleA::main' )
 console.log( 'bundleA dependency should already have logged to prove it exists in the bundle' )
