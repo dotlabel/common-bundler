@@ -32,14 +32,14 @@
     "factor-bundle": "^2.4.1",
     "glob": "^5.0.10",
     "pretty-hrtime": "^1.0.0",
-    "uglifyjs": "^2.4.10"
+    "uglifyjs": "^2.4.10",
+    "yargs": "^3.13.0"
   },
   "devDependencies": {
     "babel-eslint": "^3.1.18",
     "babelify": "^6.1.2",
     "eslint": "^0.23.0",
     "flowcheck": "^0.2.7",
-    "tape": "^4.0.0",
-    "yargs": "^3.13.0"
+    "tape": "^4.0.0"
   }
 }
