@@ -97,6 +97,18 @@ _Having unminified and source maps is useful for something like babel that trans
 $ bundler src/bundles -o dist -d
 ```
 
+### `--watch`
+
+> Select a glob of files to watch for changes and run a build when they are updated
+
+_npm will tend to expand globs so specify it as a string and it’ll get passed through to `glob` and that’ll give a list of files to `chokidar`_
+
+To try and make sure the build isn’t stale the watcher will always try to fire a new bundle on save unless it’s already working, whereby it’ll wait until it’s finished and run a build sequentially to stop multiple builds if you’re saving quickly or updating multiple files concurrently.
+
+```sh
+$ bundler src/bundles -o dist --watch 'src/**/*.js'
+```
+
 ---
 
 Enjoy responsibly!

@@ -1,6 +1,6 @@
 {
   "name": "common-bundler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Creates a common package from a collection of script bundles",
   "bin": {
     "bundler": "lib/cli"
