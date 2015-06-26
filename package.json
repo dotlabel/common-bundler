@@ -9,7 +9,7 @@
     "lint": "eslint ./src/**/*.js",
     "test": "tape ./spec/*.js",
     "example": "./lib/cli ./examples/basic/bundles -dv -o ./examples/dist -t flowcheck -t babelify",
-    "watch:example": "./lib/cli ./examples/basic/bundles -dv -o ./examples/dist -t babelify --watch examples/basic/**/*.js"
+    "watch:example": "./lib/cli ./examples/basic/bundles -dv -o ./examples/dist -t babelify --watch 'examples/basic/**/*.js'"
   },
   "keywords": [
     "babel",

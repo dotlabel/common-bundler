@@ -37,6 +37,11 @@ var argv = require( 'yargs' )
         describe: 'Adds extra logging, including timings',
         type: 'boolean'
     })
+    .options( 'watch', {
+        demand: false,
+        describe: 'Starts watching for file changes, expects a glob',
+        type: 'string'
+    })
     .help( 'h' )
     .alias( 'h', 'help' )
     .argv
