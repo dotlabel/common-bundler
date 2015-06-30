@@ -109,6 +109,27 @@ To try and make sure the build isn’t stale the watcher will always try to fire
 $ bundler src/bundles -o dist --watch 'src/**/*.js'
 ```
 
+### `-c` `--config`
+
+> Specifies a configuration file to set up [browserify](https://github.com/substack/node-browserify#browserifyfiles--opts)
+
+You can specify a custom file (such as `.bundlerrc`) if you like but using `package.json` will work just as well, just add a `bundler` key to your package config and they’ll get passed to browserify.
+
+```json
+...,
+"bundler": {
+  "extensions": [
+    ".js",
+    ".jsx"
+  ]
+},
+...
+```
+
+```sh
+$ bundler src/bundles -o dist -c package.json
+```
+
 ---
 
 Enjoy responsibly!
