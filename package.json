@@ -32,7 +32,7 @@
     "factor-bundle": "^2.4.1",
     "glob": "^5.0.10",
     "pretty-hrtime": "^1.0.0",
-    "uglifyjs": "^2.4.10",
+    "uglify-js": "^2.4.10",
     "yargs": "^3.13.0"
   },
   "devDependencies": {
